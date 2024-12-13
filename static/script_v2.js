@@ -2,8 +2,24 @@ function setAction(action) {
     document.getElementById('action').value = action;
 }
 
-// Håll koll på färdiga språk
-let completedLanguages = new Set();
+function updateButtonStates() {
+    const inputFile = document.querySelector('input[name="input_file"]').files[0];
+    const rewriteBtn = document.getElementById('rewriteDescriptions');
+
+    if (inputFile) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const content = e.target.result;
+            const hasDescription = content.includes('Description');
+            rewriteBtn.classList.toggle('disabled', !hasDescription);
+            rewriteBtn.disabled = !hasDescription;
+        };
+        reader.readAsText(inputFile);
+    } else {
+        rewriteBtn.classList.add('disabled');
+        rewriteBtn.disabled = true;
+    }
+}
 
 function showToast(message, isDownloadLink = false) {
     const toast = document.getElementById('toast');
@@ -28,52 +44,6 @@ function hideLoading() {
     document.getElementById('loading-overlay').style.display = 'none';
 }
 
-function updateButtonStates() {
-    const inputFile = document.querySelector('input[name="input_file"]').files[0];
-    const selectedLanguages = Array.from(document.querySelectorAll('input[name="languages"]:checked')).map(el => el.value);
-
-    const translateBtn = document.getElementById('translateDisplayNames');
-
-    if (inputFile && selectedLanguages.length > 0) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const content = e.target.result;
-            const hasDescription = content.includes('Description');
-
-            translateBtn.classList.toggle('disabled', !hasDescription);
-            translateBtn.disabled = !hasDescription;
-        };
-        reader.readAsText(inputFile);
-    } else {
-        translateBtn.classList.add('disabled');
-        translateBtn.disabled = true;
-    }
-}
-
-function createDownloadList() {
-    if (!$('#download-list').length) {
-        $('#progress-container').append(`
-            <div id="download-list" class="download-list">
-                <h3>Completed Translations</h3>
-                <ul></ul>
-            </div>
-        `);
-    }
-}
-
-function addToDownloadList(language, filename) {
-    if (!completedLanguages.has(language)) {
-        createDownloadList();
-        $('#download-list ul').append(`
-            <li>
-                <span>${language}</span>
-                <a href="/download/${filename}" download class="download-link">Download ${language} translations</a>
-            </li>
-        `);
-        completedLanguages.add(language);
-    }
-}
-
 function previewFile(file, previewElementId) {
     const reader = new FileReader();
     reader.onload = function(e) {
@@ -88,73 +58,38 @@ function previewFile(file, previewElementId) {
 function initializeEventSource() {
     $('#progress-container').show();
 
-    // Behåll bara progress bars för icke-färdiga språk
-    const existingBars = $('#progress-bars .progress-group').filter(function() {
-        const language = $(this).find('label').text();
-        return !completedLanguages.has(language);
-    });
-
-    $('#progress-bars').html('').append(existingBars);
-    createDownloadList();
-
-    const eventSource = new EventSource('/translate_descriptions');
+    const eventSource = new EventSource('/rewrite_descriptions_two_steps');
 
     eventSource.onmessage = function(event) {
         try {
             var data = JSON.parse(event.data);
 
             if (data.error) {
-                console.error('Translation error:', data.error);
+                console.error('Error:', data.error);
                 showToast('Error: ' + data.error);
                 return;
             }
 
-            if (data.language && data.progress !== undefined) {
-                // Skip if language is already completed
-                if (completedLanguages.has(data.language)) {
-                    return;
-                }
-
-                if (!$('#progress-bar-' + sanitizeLanguage(data.language)).length) {
-                    $('#progress-bars').append(`
+            if (data.progress !== undefined) {
+                let progressBar = $('#progress-bar-english');
+                if (!progressBar.length) {
+                    $('#progress-bars').html(`
                         <div class="progress-group">
-                            <label>${data.language}</label>
+                            <label>English (Rewritten)</label>
                             <div class="progress">
-                                <div id="progress-bar-${sanitizeLanguage(data.language)}" 
-                                     class="progress-bar" 
-                                     role="progressbar" 
-                                     style="width: 0%;" 
-                                     aria-valuenow="0" 
-                                     aria-valuemin="0" 
-                                     aria-valuemax="100">0%</div>
+                                <div id="progress-bar-english" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
                             </div>
                         </div>
                     `);
+                    progressBar = $('#progress-bar-english');
                 }
-
-                const progressBar = $('#progress-bar-' + sanitizeLanguage(data.language));
-
-                if (data.status === "complete" && data.file) {
-                    progressBar.css('width', '100%')
-                             .addClass('bg-success')
-                             .text('Complete');
-
-                    // Add to download list and mark as completed
-                    addToDownloadList(data.language, data.file);
-                } else if (typeof data.progress === 'number') {
-                    progressBar.css('width', data.progress + '%')
-                             .attr('aria-valuenow', data.progress)
-                             .text(data.progress + '%');
-                }
+                progressBar.css('width', data.progress + '%')
+                           .attr('aria-valuenow', data.progress)
+                           .text(data.progress + '%');
             }
 
             if (data.complete && data.file) {
-                // Show final success message with all download links
-                let message = 'All translations complete!';
-                message += `<br><a href="/download/${data.file}" download>Download combined translations</a>`;
-                showToast(message, true);
-
-                // Automatically trigger the download of the combined file
+                showToast('All rewriting complete!<br><a href="/download/' + data.file + '" download>Download rewritten descriptions</a>', true);
                 window.location.href = '/download/' + data.file;
                 eventSource.close();
             }
@@ -170,32 +105,7 @@ function initializeEventSource() {
     };
 }
 
-function sanitizeLanguage(lang) {
-    return lang.replace(/\s+/g, '_').toLowerCase();
-}
-
-function showExample(type) {
-    document.getElementById('overlay').style.display = 'block';
-    document.getElementById(`${type}-example`).style.display = 'block';
-}
-
-function hideExample(type) {
-    document.getElementById('overlay').style.display = 'none';
-    document.getElementById(`${type}-example`).style.display = 'none';
-}
-
-// Stäng popup när man klickar utanför
-document.getElementById('overlay').addEventListener('click', function() {
-    document.querySelectorAll('.example-popup').forEach(popup => {
-        popup.style.display = 'none';
-    });
-    this.style.display = 'none';
-});
-
 $(document).ready(function() {
-    // Reset completed languages on page load
-    completedLanguages.clear();
-
     $('input[name="input_file"]').change(function() {
         updateButtonStates();
         if (this.files[0]) {
@@ -203,16 +113,20 @@ $(document).ready(function() {
         }
     });
 
-    $('#language-checkboxes').on('change', 'input[type="checkbox"]', updateButtonStates);
-
     $('#uploadForm').submit(function(e) {
         e.preventDefault();
-        setAction('translate_descriptions');
+        setAction('rewrite_descriptions_two_steps');
         var formData = new FormData(this);
 
-        // Hämta custom prompt från textarea
-        const userPrompt = document.getElementById('user_prompt').value;
-        formData.append('user_prompt', userPrompt);
+        const systemPrompt1 = document.getElementById('system_prompt_1').value;
+        const userPrompt1   = document.getElementById('user_prompt_1').value;
+        const systemPrompt2 = document.getElementById('system_prompt_2').value;
+        const userPrompt2   = document.getElementById('user_prompt_2').value;
+
+        formData.append('system_prompt_1', systemPrompt1);
+        formData.append('user_prompt_1', userPrompt1);
+        formData.append('system_prompt_2', systemPrompt2);
+        formData.append('user_prompt_2', userPrompt2);
 
         $.ajax({
             url: '/upload',
@@ -240,19 +154,5 @@ $(document).ready(function() {
 
     $('#toast').on('click', '.close-btn', function() {
         hideToast();
-    });
-
-    // Input file preview
-    document.getElementById('input_file').addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const preview = document.getElementById('input-file-preview');
-                const lines = e.target.result.split('\n').slice(0, 5);
-                preview.innerHTML = '<strong>Preview:</strong><br>' + lines.join('<br>');
-            };
-            reader.readAsText(file);
-        }
     });
 });

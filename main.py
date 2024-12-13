@@ -3,8 +3,6 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify, session, send_file, Response
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
-from translate_display_names import translate_display_names_function
-from translate_descriptions import translate_descriptions_function
 import os
 import pandas as pd
 from flask_wtf.csrf import CSRFProtect
@@ -12,12 +10,13 @@ import json
 from language_config import load_language_config, save_language_config
 from functools import wraps
 from datetime import timedelta
+import sys
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB max filstorlek
-app.secret_key = os.urandom(24)  # För sessionshantering
-app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=4)  # 4 timmar
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
+app.secret_key = os.urandom(24)
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=4)
 app.config['SESSION_PERMANENT'] = True
 csrf = CSRFProtect(app)
 
@@ -83,92 +82,57 @@ def upload_file():
         return jsonify({'error': 'Input file must be uploaded'}), 400
 
     input_file = request.files['input_file']
-    examples_file = request.files.get('examples_file')
-    # dictionary_file tas ej längre i bruk
-    dictionary_file = request.files.get('dictionary_file')  # Finns kvar men används ej
-    selected_languages = request.form.getlist('languages')
-    version = request.form.get('version', '1')
-    user_prompt = request.form.get('user_prompt', '')
-
     if input_file.filename == '':
         return jsonify({'error': 'No file selected'}), 400
 
     if not allowed_file(input_file.filename):
         return jsonify({'error': 'Only CSV files are allowed'}), 400
 
-    # För version 1 krävs examples_file
-    if version == '1' and (not examples_file or examples_file.filename == ''):
-        return jsonify({'error': 'Examples file must be uploaded for version 1'}), 400
+    input_filename = secure_filename(input_file.filename)
+    input_file.save(os.path.join(app.config['UPLOAD_FOLDER'], input_filename))
 
-    if input_file and selected_languages:
-        input_filename = secure_filename(input_file.filename)
-        input_file.save(os.path.join(app.config['UPLOAD_FOLDER'], input_filename))
+    session['input_file'] = input_filename
 
-        session['input_file'] = input_filename
-        session['languages'] = selected_languages
-        session['version'] = version
-        session['user_prompt'] = user_prompt.strip()
+    # Hämta promptar
+    system_prompt_1 = request.form.get('system_prompt_1', '').strip()
+    user_prompt_1   = request.form.get('user_prompt_1', '').strip()
+    system_prompt_2 = request.form.get('system_prompt_2', '').strip()
+    user_prompt_2   = request.form.get('user_prompt_2', '').strip()
 
-        if examples_file:
-            examples_filename = secure_filename(examples_file.filename)
-            examples_file.save(os.path.join(app.config['UPLOAD_FOLDER'], examples_filename))
-            session['examples_file'] = examples_filename
+    session['system_prompt_1'] = system_prompt_1
+    session['user_prompt_1']   = user_prompt_1
+    session['system_prompt_2'] = system_prompt_2
+    session['user_prompt_2']   = user_prompt_2
 
-        # dictionary_file ignoreras men vi sparar ändå om du vill återanvända kod
-        if dictionary_file:
-            dictionary_filename = secure_filename(dictionary_file.filename)
-            dictionary_file.save(os.path.join(app.config['UPLOAD_FOLDER'], dictionary_filename))
-            session['dictionary_file'] = dictionary_filename
-        else:
-            session.pop('dictionary_file', None)
+    action = request.form.get('action')
+    if action == 'rewrite_descriptions_two_steps':
+        return jsonify({'redirect': url_for('rewrite_descriptions_two_steps')})
+    else:
+        return jsonify({'error': 'Invalid action'}), 400
 
-        action = request.form.get('action')
-        if action == 'translate_descriptions':
-            if version == '2':
-                return jsonify({'redirect': url_for('translate_descriptions')})
-            return jsonify({'redirect': url_for('translate_display_names')})
-        elif action == 'translate_titles':
-            return jsonify({'redirect': url_for('translate_display_names')})
-        else:
-            return jsonify({'error': 'Invalid action'}), 400
-
-    return jsonify({'error': 'Invalid request'}), 400
-
-@app.route('/translate_display_names')
+@app.route('/rewrite_descriptions_two_steps')
 @login_required
-def translate_display_names():
-    input_file = session.get('input_file')
-    examples_file = session.get('examples_file')
-    selected_languages = session.get('languages')
+def rewrite_descriptions_two_steps():
+    from translate_descriptions import rewrite_descriptions_two_steps_function
 
-    if not input_file or not examples_file or not selected_languages:
-        return jsonify({'error': 'Filer eller språk saknas'}), 400
+    input_file = session.get('input_file')
+    if not input_file:
+        return jsonify({'error': 'File is missing'}), 400
+
+    system_prompt_1 = session.get('system_prompt_1', '')
+    user_prompt_1   = session.get('user_prompt_1', '')
+    system_prompt_2 = session.get('system_prompt_2', '')
+    user_prompt_2   = session.get('user_prompt_2', '')
 
     def generate():
-        for message in translate_display_names_function(app.config['UPLOAD_FOLDER'], 
-                                                        input_file, 
-                                                        examples_file, 
-                                                        selected_languages):
-            yield f"data: {message}\n\n"
-
-    return Response(generate(), mimetype='text/event-stream')
-
-@app.route('/translate_descriptions')
-@login_required
-def translate_descriptions():
-    input_file = session.get('input_file')
-    selected_languages = session.get('languages')
-    # dictionary_file ignoreras men lämnas kvar i signaturen
-    dictionary_file = session.get('dictionary_file', None)
-
-    if not input_file or not selected_languages:
-        return jsonify({'error': 'Fil eller språk saknas'}), 400
-
-    def generate():
-        for message in translate_descriptions_function(app.config['UPLOAD_FOLDER'], 
-                                                       input_file,
-                                                       dictionary_file,
-                                                       selected_languages):
+        for message in rewrite_descriptions_two_steps_function(
+            app.config['UPLOAD_FOLDER'],
+            input_file,
+            system_prompt_1,
+            user_prompt_1,
+            system_prompt_2,
+            user_prompt_2
+        ):
             yield f"data: {message}\n\n"
 
     return Response(generate(), mimetype='text/event-stream')
@@ -197,8 +161,6 @@ def upload_examples():
 
         try:
             df = pd.read_csv(file_path)
-            # get_available_languages används ej längre, men kan finnas kvar om så önskas
-            # Du kan behålla logik här om du vill fortsätta använda denna funktionalitet
             language_mapping = load_language_config()
             available_langs = []
             for col in df.columns:
@@ -206,7 +168,6 @@ def upload_examples():
                     code = col.split(' - ')[1]
                     if code in language_mapping:
                         available_langs.append(language_mapping[code])
-
         except Exception as e:
             return jsonify({'error': f'Fel vid bearbetning av fil: {str(e)}'}), 500
         finally:

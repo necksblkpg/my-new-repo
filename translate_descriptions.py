@@ -1,7 +1,5 @@
 # translate_descriptions.py
 
-from language_config import get_language_code
-from flask import session
 import pandas as pd
 import os
 import json
@@ -12,128 +10,100 @@ from time import sleep
 import re
 import openai
 
-# Sätt din OpenAI-nyckel på ett säkert sätt i miljövariabler
-openai.api_key = os.getenv('OPENAI_API_KEY')
+# Sätt client till openai för att använda ny anropsmetod
+client = openai
+client.api_key = os.getenv('OPENAI_API_KEY')
 
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s',
                     stream=sys.stdout)
 
-@retry(stop=stop_after_attempt(3),
-       wait=wait_exponential(multiplier=1, min=4, max=10))
-def translate_single_description(text, target_language, user_prompt):
+@retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
+def rewrite_single_description(text, system_prompt, user_prompt):
     if pd.isna(text) or not text.strip():
         return ""
 
-    prompt = f"""You are a professional product description translator.
-Translate this text to {target_language}, maintaining a natural and professional tone:
+    combined_prompt = f"""
+System prompt:
+{system_prompt}
 
-{text}
-
-Custom user instructions:
+User prompt:
 {user_prompt}
 
-Important:
-- Keep product terminology consistent and accurate
-- Maintain the same level of detail as the original
-- Ensure proper grammar and natural flow in {target_language}
-- Preserve the exact meaning of technical terms
+Original text:
+{text}
+
+Rewrite this English product description according to the system and user instructions above. The final output should be in English.
 """
 
-    response = openai.ChatCompletion.create(
+    # Anropa den nya metoden
+    response = client.chat.completions.create(
         model="gpt-4",
         messages=[
-            {"role": "system", "content": "You are an expert product translator."},
-            {"role": "user", "content": prompt}
+            {"role": "system", "content": "You are an expert product copywriter."},
+            {"role": "user", "content": combined_prompt}
         ],
         temperature=0.1
     )
 
-    translated_text = response.choices[0].message.content.strip()
+    rewritten_text = response.choices[0].message.content.strip()
 
     # Korrigera versalisering i början av meningar
-    translated_text = re.sub(r'(^|[.?!]\s+)([a-zåäöéèóúìùü]+)', 
-                             lambda m: m.group(1) + m.group(2).capitalize(), 
-                             translated_text)
+    rewritten_text = re.sub(
+        r'(^|[.?!]\s+)([a-zåäöéèóúìùü]+)',
+        lambda m: m.group(1) + m.group(2).capitalize(),
+        rewritten_text
+    )
 
-    return translated_text
+    return rewritten_text
 
-def translate_descriptions_function(upload_folder, input_file, dictionary_file, selected_languages):
-    # dictionary_file ignoreras nu
-    BATCH_SIZE = 50
-    completed_languages = set()
-    completed_files = []
-
+def rewrite_descriptions_two_steps_function(upload_folder, input_file, system_prompt_1, user_prompt_1, system_prompt_2, user_prompt_2):
     try:
-        user_prompt = session.get('user_prompt', '').strip()
-
         input_csv = os.path.join(upload_folder, input_file)
-        input_df = pd.read_csv(input_csv, sep=',', dtype={'SKU': str})
+        input_df = pd.read_csv(input_csv, sep=None, engine='python', dtype={'SKU': str})
         total_rows = len(input_df)
 
-        # Skapa kolumner för valda språk
-        for language in selected_languages:
-            lang_code = get_language_code(language)
-            column_name = f'Description - {lang_code}'
-            if column_name not in input_df.columns:
-                input_df[column_name] = ''
+        if 'Description (Rewrite Step 1)' not in input_df.columns:
+            input_df['Description (Rewrite Step 1)'] = ''
 
-        for target_language in selected_languages:
-            if target_language in completed_languages:
-                continue
+        # Steg 1
+        for i in range(total_rows):
+            text = input_df.iloc[i]['Description']
+            try:
+                rewritten = rewrite_single_description(text, system_prompt_1, user_prompt_1)
+                input_df.loc[i, 'Description (Rewrite Step 1)'] = rewritten
+                progress = int(((i + 1) / (2 * total_rows)) * 100)
+                yield json.dumps({"progress": progress}) + "\n\n"
+                sleep(0.3)
+            except Exception as e:
+                error_msg = f"Error at step 1, index {i}: {str(e)}"
+                logging.error(error_msg)
+                yield json.dumps({"error": error_msg}) + "\n\n"
 
-            lang_code = get_language_code(target_language)
-            column_name = f'Description - {lang_code}'
+        if 'Description (Rewritten)' not in input_df.columns:
+            input_df['Description (Rewritten)'] = ''
 
-            batch_start = 0
-            while batch_start < total_rows:
-                batch_end = min(batch_start + BATCH_SIZE, total_rows)
+        # Steg 2
+        for j in range(total_rows):
+            text_step_1 = input_df.iloc[j]['Description (Rewrite Step 1)']
+            try:
+                rewritten_step_2 = rewrite_single_description(text_step_1, system_prompt_2, user_prompt_2)
+                input_df.loc[j, 'Description (Rewritten)'] = rewritten_step_2
+                progress = int(((total_rows + j + 1) / (2 * total_rows)) * 100)
+                yield json.dumps({"progress": progress}) + "\n\n"
+                sleep(0.3)
+            except Exception as e:
+                error_msg = f"Error at step 2, index {j}: {str(e)}"
+                logging.error(error_msg)
+                yield json.dumps({"error": error_msg}) + "\n\n"
 
-                for index in range(batch_start, batch_end):
-                    try:
-                        text = input_df.iloc[index]['Description']
-                        translated = translate_single_description(text, target_language, user_prompt)
-                        input_df.loc[index, column_name] = translated
-                        progress = int((index + 1) / total_rows * 100)
-                        yield json.dumps({"language": target_language, "progress": progress}) + "\n\n"
-                        sleep(0.3)
-
-                    except Exception as e:
-                        error_msg = f"Error at index {index}: {str(e)}"
-                        logging.error(error_msg)
-                        yield json.dumps({
-                            "error": error_msg,
-                            "language": target_language
-                        }) + "\n\n"
-                        continue
-
-                batch_start += BATCH_SIZE
-
-            # Spara fil per språk
-            lang_filename = f"translated_descriptions_{target_language}.csv"
-            lang_output_path = os.path.join(upload_folder, lang_filename)
-            selected_columns = ['Product ID', 'SKU', 'Description', column_name]
-            input_df[selected_columns].to_csv(lang_output_path, index=False)
-
-            completed_languages.add(target_language)
-            completed_files.append({"language": target_language, "file": lang_filename})
-            yield json.dumps({"language": target_language, "progress": 100, "status": "complete", "file": lang_filename}) + "\n\n"
-
-        # Spara sammanställd fil
-        output_filename = "translated_descriptions_all.csv"
-        selected_columns = ['Product ID', 'SKU', 'Description'] + [
-            f'Description - {get_language_code(lang)}'
-            for lang in completed_languages
-        ]
+        # Spara slutlig fil
+        output_filename = "rewritten_descriptions_all.csv"
+        selected_columns = ['Product ID', 'SKU', 'Description', 'Description (Rewrite Step 1)', 'Description (Rewritten)']
         input_df[selected_columns].to_csv(os.path.join(upload_folder, output_filename), index=False)
-        yield json.dumps({
-            "complete": True,
-            "file": output_filename,
-            "completed_files": completed_files,
-            "completed_languages": list(completed_languages)
-        }) + "\n\n"
+        yield json.dumps({"complete": True, "file": output_filename}) + "\n\n"
 
     except Exception as e:
-        error_msg = f"Fatal error in translation process: {str(e)}"
+        error_msg = f"Fatal error in rewriting process: {str(e)}"
         logging.error(error_msg)
         yield json.dumps({"error": error_msg}) + "\n\n"
