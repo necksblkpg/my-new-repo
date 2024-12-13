@@ -30,17 +30,16 @@ function hideLoading() {
 
 function updateButtonStates() {
     const inputFile = document.querySelector('input[name="input_file"]').files[0];
-    const dictionaryFile = document.querySelector('input[name="dictionary_file"]').files[0];
     const selectedLanguages = Array.from(document.querySelectorAll('input[name="languages"]:checked')).map(el => el.value);
 
     const translateBtn = document.getElementById('translateDisplayNames');
-    
+
     if (inputFile && selectedLanguages.length > 0) {
         const reader = new FileReader();
         reader.onload = function(e) {
             const content = e.target.result;
             const hasDescription = content.includes('Description');
-            
+
             translateBtn.classList.toggle('disabled', !hasDescription);
             translateBtn.disabled = !hasDescription;
         };
@@ -88,18 +87,18 @@ function previewFile(file, previewElementId) {
 
 function initializeEventSource() {
     $('#progress-container').show();
-    
+
     // Behåll bara progress bars för icke-färdiga språk
     const existingBars = $('#progress-bars .progress-group').filter(function() {
         const language = $(this).find('label').text();
         return !completedLanguages.has(language);
     });
-    
+
     $('#progress-bars').html('').append(existingBars);
     createDownloadList();
 
     const eventSource = new EventSource('/translate_descriptions');
-    
+
     eventSource.onmessage = function(event) {
         try {
             var data = JSON.parse(event.data);
@@ -134,7 +133,7 @@ function initializeEventSource() {
                 }
 
                 const progressBar = $('#progress-bar-' + sanitizeLanguage(data.language));
-                
+
                 if (data.status === "complete" && data.file) {
                     progressBar.css('width', '100%')
                              .addClass('bg-success')
@@ -142,7 +141,7 @@ function initializeEventSource() {
 
                     // Add to download list and mark as completed
                     addToDownloadList(data.language, data.file);
-                } else {
+                } else if (typeof data.progress === 'number') {
                     progressBar.css('width', data.progress + '%')
                              .attr('aria-valuenow', data.progress)
                              .text(data.progress + '%');
@@ -204,19 +203,16 @@ $(document).ready(function() {
         }
     });
 
-    $('input[name="dictionary_file"]').change(function() {
-        if (this.files[0]) {
-            previewFile(this.files[0], 'dictionary-file-preview');
-        }
-        updateButtonStates();
-    });
-
     $('#language-checkboxes').on('change', 'input[type="checkbox"]', updateButtonStates);
 
     $('#uploadForm').submit(function(e) {
         e.preventDefault();
         setAction('translate_descriptions');
         var formData = new FormData(this);
+
+        // Hämta custom prompt från textarea
+        const userPrompt = document.getElementById('user_prompt').value;
+        formData.append('user_prompt', userPrompt);
 
         $.ajax({
             url: '/upload',
@@ -255,20 +251,6 @@ $(document).ready(function() {
                 const preview = document.getElementById('input-file-preview');
                 const lines = e.target.result.split('\n').slice(0, 5);
                 preview.innerHTML = '<strong>Preview:</strong><br>' + lines.join('<br>');
-            };
-            reader.readAsText(file);
-        }
-    });
-
-    // Dictionary file preview
-    document.getElementById('dictionary_file').addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const preview = document.getElementById('dictionary-file-preview');
-                const lines = e.target.result.split('\n').slice(0, 5);
-                preview.innerHTML = '<strong>Dictionary Preview:</strong><br>' + lines.join('<br>');
             };
             reader.readAsText(file);
         }
