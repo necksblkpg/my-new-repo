@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Description Translator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="creative-title">Translation Tool</h1>
+        <nav>
+            <a href="{{ url_for('index') }}" class="nav-button home">Home</a>
+            <a href="{{ url_for('show_language_config') }}" class="nav-button">Configure Languages</a>
+            <a href="{{ url_for('instructions') }}" class="nav-button">Instructions</a>
+            <a href="{{ url_for('logout') }}" class="nav-button">Logout</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 class="page-title">Product Description Translator</h2>
+        <p class="page-description">Translate product descriptions with custom dictionary support</p>
+        <div class="card">
+            <form id="uploadForm" action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="version" value="2">
+                <input type="hidden" name="action" id="action" value="translate_descriptions">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+                <div class="form-group">
+                    <label for="input_file">Input File (CSV):</label>
+                    <div class="file-input-container">
+                        <input type="file" name="input_file" id="input_file" accept=".csv" required>
+                        <button type="button" class="example-btn" onclick="showExample('input')">View Example</button>
+                    </div>
+                    <div id="input-file-preview" class="file-preview"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dictionary_file">Dictionary File (Optional):</label>
+                    <div class="file-input-container">
+                        <input type="file" name="dictionary_file" id="dictionary_file" accept=".csv">
+                        <button type="button" class="example-btn" onclick="showExample('dictionary')">View Example</button>
+                    </div>
+                    <div id="dictionary-file-preview" class="file-preview"></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="language-label">Select Target Languages:</label>
+                    <div id="language-checkboxes" class="checkbox-container">
+                        {% for code, name in languages.items() %}
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="languages" value="{{ name }}" id="lang_{{ code }}">
+                            <label for="lang_{{ code }}">{{ name }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" id="translateDisplayNames" class="btn primary-btn">Translate Descriptions</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <div id="toast" class="toast">
+        <button class="close-btn">&times;</button>
+    </div>
+
+    <div id="progress-container" style="display:none;">
+        <h2>Translation Progress</h2>
+        <div id="progress-bars"></div>
+    </div>
+
+    <!-- Popup containers -->
+    <div class="overlay" id="overlay"></div>
+    
+    <div class="example-popup" id="input-example">
+        <span class="close-popup" onclick="hideExample('input')">&times;</span>
+        <h3>Input File Example</h3>
+        <pre>
+Product ID,SKU,Description
+1004,BOW-001,Black silk bow tie perfect for formal events
+1005,TIE-003,Striped business tie in grey and blue tones
+        </pre>
+    </div>
+
+    <div class="example-popup" id="dictionary-example">
+        <span class="close-popup" onclick="hideExample('dictionary')">&times;</span>
+        <h3>Dictionary File Example</h3>
+        <pre>
+Original,sv,no,da
+bow tie,fluga,sløyfe,butterfly
+silk,silke,silke,silke
+        </pre>
+    </div>
+
+    <script src="{{ url_for('static', filename='script_v2.js') }}"></script>
+</body>
+</html>

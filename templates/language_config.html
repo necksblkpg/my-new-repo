@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Language Configuration</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Language Configuration</h1>
+    <table id="languageTable">
+        <tr>
+            <th>Language Code</th>
+            <th>Language Name</th>
+            <th>Action</th>
+        </tr>
+        {% for code, name in languages.items() %}
+        <tr>
+            <td><input type="text" class="langCode" value="{{ code }}"></td>
+            <td><input type="text" class="langName" value="{{ name }}"></td>
+            <td><button onclick="removeRow(this)">Remove</button></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button onclick="addRow()">Add Language</button>
+    <button onclick="saveConfig()">Save Configuration</button>
+
+    <script>
+        function addRow() {
+            $('#languageTable').append(`
+                <tr>
+                    <td><input type="text" class="langCode"></td>
+                    <td><input type="text" class="langName"></td>
+                    <td><button onclick="removeRow(this)">Remove</button></td>
+                </tr>
+            `);
+        }
+
+        function removeRow(button) {
+            $(button).closest('tr').remove();
+        }
+
+        function saveConfig() {
+            let config = {};
+            $('#languageTable tr').each(function() {
+                let code = $(this).find('.langCode').val();
+                let name = $(this).find('.langName').val();
+                if (code && name) {
+                    config[code] = name;
+                }
+            });
+            
+            $.ajax({
+                url: '/update_language_config',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(config),
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token() }}'
+                },
+                success: function(response) {
+                    if (response.success) {
+                        alert('Configuration saved successfully!');
+                    } else {
+                        alert('Error saving configuration.');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    alert('An error occurred while saving the configuration: ' + error);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

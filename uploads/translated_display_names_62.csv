@@ -1,0 +1,401 @@
+Product ID,SKU,Display Name,Display name - fr
+1033,100-01,White tie,Translation Error
+1034,100-02,Orange tie,Translation Error
+1035,100-04,Burgundy tie,Translation Error
+1036,100-05,Dark purple tie,Translation Error
+1037,100-06,Purple tie,Translation Error
+1038,100-07,Light purple tie,Translation Error
+1039,100-08,Turquoise tie,Translation Error
+1040,100-09,Navy tie,Translation Error
+1041,100-10,Blue tie,Translation Error
+1042,100-10-01,Boys white tie,Translation Error
+1044,100-10-02-Satin,Boys orange tie Satin,Translation Error
+1045,100-10-04,Boys burgundy tie,Translation Error
+1046,100-10-05,Boys dark purple tie,Translation Error
+1047,100-10-06,Boys purple tie,Translation Error
+1048,100-10-07,Boys light purple tie,Translation Error
+1049,100-10-08,Boys turquoise tie,Translation Error
+1050,100-10-09,Boys navy tie,Translation Error
+1051,100-10-10,Boys blue tie,Translation Error
+1053,100-10-13,Boys dark yellow tie,Translation Error
+1054,100-10-14,Boys creme gold tie,Translation Error
+1055,100-10-14-Satin,Boys creme gold tie Satin,Translation Error
+1056,100-10-15,Boys black tie,Translation Error
+1057,100-10-16,Boys lime green tie,Translation Error
+1058,100-10-17,Boys dark green tie,Translation Error
+1059,100-10-18,Boys dark silver tie,Translation Error
+1060,100-10-19,Boys dark brown tie,Translation Error
+1061,100-10-20,Boys dark pink tie,Translation Error
+1062,100-10-21,Boys light pink tie,Translation Error
+1063,100-10-22,Boys brown tie,Translation Error
+1064,100-10-23,Boys mint green tie,Translation Error
+1066,100-10-25,Boys dark coral tie,Translation Error
+1067,100-10-25-Satin,Boys dark coral tie Satin,Translation Error
+1068,100-10-26,Boys rust orange tie,Translation Error
+1069,100-10-29,Boys olive green tie,Translation Error
+1070,100-10-31,Boys cerise pink tie,Translation Error
+1071,100-10-33,Boys teal tie,Translation Error
+1072,100-10-35,Boys dark burgundy tie,Translation Error
+1073,100-10-37,Boys light coral tie,Translation Error
+1074,100-10-38,Boys light yellow tie,Translation Error
+1075,100-10-39,Boys extra light pink tie,Translation Error
+1076,100-10-40,Boys red tie,Translation Error
+1077,100-10-41,Boys green tie,Translation Error
+1079,100-10-44,Boys bronze tie,Translation Error
+1080,100-10-45,Boys silver tie,Translation Error
+1081,100-10-46,Boys yellow tie,Translation Error
+1082,100-10-48,Boys coral tie,Translation Error
+1084,100-10-51,Boys midnight navy tie,Translation Error
+1085,100-10-52,Boys rose purple tie,Translation Error
+1086,100-10-53,Boys old pink tie,Translation Error
+1089,100-10-56,Boys salmon pink tie,Translation Error
+1090,100-11,Light blue tie,Translation Error
+1091,100-13,Dark yellow tie,Translation Error
+1092,100-14,Creme gold tie,Translation Error
+1093,100-15,Black tie,Translation Error
+1094,100-16,Lime green tie,Translation Error
+1095,100-17,Dark green tie,Translation Error
+1096,100-18,Dark silver tie,Translation Error
+1097,100-19,Dark brown tie,Translation Error
+1098,100-20-01,Boys white tie,Translation Error
+1099,100-20-02,Boys orange tie,Translation Error
+1100,100-20-03,Boys light red tie,Translation Error
+1102,100-20-05,Boys dark purple tie,Translation Error
+1103,100-20-05-1,Boys dark purple tie Satin,Translation Error
+1104,100-20-06,Boys purple tie,Translation Error
+1105,100-20-07,Boys light purple tie,Translation Error
+1106,100-20-07-1,Boys light purple tie Satin,Translation Error
+1107,100-20-08,Boys turquoise tie,Translation Error
+1109,100-20-13,Boys dark yellow tie,Translation Error
+1110,100-20-14,Boys creme gold tie,Translation Error
+1112,100-20-16,Boys lime green tie,Translation Error
+1114,100-20-18,Boys dark silver tie,Translation Error
+1116,100-20-20,Boys dark pink tie,Translation Error
+1117,100-20-21,Boys light pink tie,Translation Error
+1118,100-20-21-new,Boys light pink tie,Translation Error
+1119,100-20-23,Boys mint green tie,Translation Error
+1120,100-20-24,Boys apricot tie,Translation Error
+1121,100-20-25,Boys dark coral tie,Translation Error
+1122,100-20-26,Boys rust orange tie,Translation Error
+1123,100-20-28,Boys mint blue tie,Translation Error
+1124,100-20-31,Boys cerise pink tie,Translation Error
+1125,100-20-33,Boys teal tie,Translation Error
+1126,100-20-35,Boys burgundy tie,Translation Error
+1127,100-20-37,Boys light coral tie,Translation Error
+1128,100-20-38,Boys light yellow tie,Translation Error
+1129,100-20-39,Boys extra light pink tie,Translation Error
+1131,100-20-41,Boys green tie,Translation Error
+1132,100-20-43,Boys gold tie,Translation Error
+1133,100-20-44,Boys bronze tie,Translation Error
+1134,100-20-45,Boys silver tie,Translation Error
+1135,100-20-46,Boys yellow tie,Translation Error
+1136,100-20-48,Boys coral tie,Translation Error
+1137,100-20-50,Boys grey tie,Translation Error
+1138,100-20-51,Boys midnight navy tie,Translation Error
+1139,100-20-52,Boys rose purple tie,Translation Error
+1140,100-20-53,Boys old pink tie,Translation Error
+1141,100-20-53-1,Boys old pink tie,Translation Error
+1142,100-20-54,Boys light green tie,Translation Error
+1143,100-20-56,Boys salmon pink tie,Translation Error
+1144,100-20-58,Boys grey tie,Translation Error
+1145,100-21,Light pink tie,Translation Error
+1146,100-22,Brown tie,Translation Error
+1147,100-24,Apricot tie,Translation Error
+1148,100-26,Rust orange tie,Translation Error
+1149,100-27,Mustard yellow tie,Translation Error
+1151,100-29,Olive green tie,Translation Error
+1152,100-31,Cerise pink tie,Translation Error
+1153,100-33,Teal tie,Translation Error
+1155,100-38,Light yellow tie,Translation Error
+1156,100-39,Extra light pink tie,Translation Error
+1157,100-40,Red tie,Translation Error
+1158,100-41,Green tie,Translation Error
+1159,100-44,Bronze tie,Translation Error
+1160,100-45,Silver tie,Translation Error
+1162,100-50,Grey tie,Translation Error
+1163,100-51,Midnight navy tie,Translation Error
+1164,100-52,Rose purple tie,Translation Error
+1165,100-53,Old pink tie,Translation Error
+1166,100-55,Off white tie,Translation Error
+1167,100-56,Salmon pink tie,Translation Error
+1168,100-XL-01,White tie XL,Translation Error
+1179,1100-20-31,Boys burgundy dotted tie,Translation Error
+1190,1200-01,Extra skinny white tie,Translation Error
+1191,1200-04,Extra skinny burgundy tie,Translation Error
+1192,1200-09,Extra skinny navy tie,Translation Error
+1193,1200-15,Extra skinny black tie,Translation Error
+1194,1200-39,Extra skinny extra light pink tie,Translation Error
+1201,200-01,Skinny white tie,Translation Error
+1202,200-02,Skinny orange tie,Translation Error
+1203,200-03,Skinny light red tie,Translation Error
+1204,200-04,Skinny burgundy tie,Translation Error
+1205,200-05,Skinny dark purple tie,Translation Error
+1206,200-06,Skinny purple tie,Translation Error
+1207,200-07,Skinny light purple tie,Translation Error
+1208,200-08,Skinny turquoise tie,Translation Error
+1209,200-09,Skinny navy tie,Translation Error
+1210,200-10,Skinny blue tie,Translation Error
+1211,200-11,Skinny light blue tie,Translation Error
+1212,200-13,Skinny dark yellow tie,Translation Error
+1213,200-14,Skinny creme gold tie,Translation Error
+1214,200-15,Skinny black tie,Translation Error
+1215,200-16,Skinny lime green tie,Translation Error
+1216,200-17,Skinny dark green tie,Translation Error
+1217,200-18,Skinny dark silver tie,Translation Error
+1218,200-19,Skinny dark brown tie,Translation Error
+1219,200-21,Skinny light pink tie,Translation Error
+1220,200-22,Skinny brown tie,Translation Error
+1221,200-23,Skinny mint green tie,Translation Error
+1222,200-24,Skinny apricot tie,Translation Error
+1223,200-26,Skinny rust orange tie,Translation Error
+1224,200-27,Skinny mustard yellow tie,Translation Error
+1225,200-28,Skinny mint blue tie,Translation Error
+1226,200-29,Skinny olive green tie,Translation Error
+1227,200-31,Skinny cerise pink tie,Translation Error
+1228,200-33,Skinny teal tie,Translation Error
+1230,200-38,Skinny light yellow tie,Translation Error
+1231,200-39,Skinny extra light pink tie,Translation Error
+1232,200-40,Skinny red tie,Translation Error
+1233,200-41,Skinny green tie,Translation Error
+1235,200-44,Skinny bronze tie,Translation Error
+1236,200-45,Skinny silver tie,Translation Error
+1237,200-46,Skinny yellow tie,Translation Error
+1240,200-50,Skinny grey tie,Translation Error
+1241,200-51,Skinny midnight navy tie,Translation Error
+1242,200-52,Skinny rose purple tie,Translation Error
+1243,200-53,Skinny old pink tie,Translation Error
+1244,200-55,Skinny off white tie,Translation Error
+1245,200-56,Skinny salmon pink tie,Translation Error
+1246,200-57,Skinny pink tie,Translation Error
+1380,3100-49,Purple paisley tie,Translation Error
+1382,3100-56-NEW,Pink dotted tie,Translation Error
+1389,3200-32,Skinny navy dotted tie,Translation Error
+1390,3200-33,Skinny black dotted tie,Translation Error
+1393,3200-43,Skinny red floral tie,Translation Error
+1394,3200-44,Skinny blue floral tie,Translation Error
+1395,3200-47,Skinny blue paisley tie,Translation Error
+1396,3200-48,Skinny blue paisley tie,Translation Error
+1397,3200-49,Skinny purple paisley tie,Translation Error
+1398,3200-50,Skinny blue striped tie,Translation Error
+1399,3200-51,Skinny white paisley tie,Translation Error
+1400,3200-52,Skinny navy paisley tie,Translation Error
+1401,3200-54,Skinny white floral tie,Translation Error
+1403,3200-60,Skinny red paisley tie,Translation Error
+1404,3200-61,Skinny black paisley tie,Translation Error
+1406,3200-63,Skinny red paisley tie,Translation Error
+1407,3200-70,Skinny red tie vernier,Translation Error
+4181,BS-100-01,Black dotted tie,Translation Error
+4186,BS-200-01,Skinny black dotted tie,Translation Error
+4188,BS-200-03,Skinny blue dotted tie,Translation Error
+4189,BS-200-04,Skinny black dotted tie,Translation Error
+4191,BS-200-08,Skinny purple dotted tie,Translation Error
+4192,BS-200-09,Skinny red dotted tie,Translation Error
+4209,BSB-100-01,Blue dotted tie,Translation Error
+4210,BSB-100-02,Blue dotted tie,Translation Error
+4211,BSB-200-02,Skinny blue dotted tie,Translation Error
+4212,BSB-200-03,Skinny grey dotted tie,Translation Error
+4241,C100-16,Purple tie,Translation Error
+4244,C100-2,Light blue tie,Translation Error
+4246,C100-22,Red striped tie,Translation Error
+4247,C100-4,Blue striped tie,Translation Error
+4248,C100-5,Brown striped tie,Translation Error
+4249,C100-8,Blue tie,Translation Error
+4273,CHR-100-01,Navy Christmas tie Santa,Translation Error
+4274,CHR-100-02,Green Christmas tie Santa,Translation Error
+4275,CHR-100-03,Burgundy Christmas tie Santa,Translation Error
+4276,CHR-100-04,Red Christmas tie Snowmen,Translation Error
+4277,CHR-100-05,Blue Christmas tie Snowman,Translation Error
+4278,CHR-100-07,Green Christmas tie Rudolf,Translation Error
+4281,CHR-100-10-01,Boys blue Christmas tie Santa,Translation Error
+4282,CHR-100-10-02,Boys green Christmas tie Santa,Translation Error
+4283,CHR-100-10-03,Boys burgundy Christmas tie Santa,Translation Error
+4284,CHR-100-11,Navy Christmas tie Tree,Translation Error
+4285,CHR-100-12,Blue Christmas tie Merry,Translation Error
+4286,CHR-100-13,Navy Christmas tie Penguin,Translation Error
+4287,CHR-100-14,Red Christmas tie Penguin,Translation Error
+4288,CHR-100-15,Navy Christmas tie Tree,Translation Error
+4289,CHR-100-16,Red Christmas tie Tree,Translation Error
+4371,DT-100-03,Purple dotted tie,Translation Error
+4372,DT-100-06,Blue dotted tie,Translation Error
+4374,DT-200-03,Skinny purple dotted tie,Translation Error
+4375,DT-200-05,Skinny teal dotted tie,Translation Error
+4376,DT-200-06,Skinny blue dotted tie,Translation Error
+4378,DT-200-08,Skinny green dotted tie,Translation Error
+4379,DT-200-09,Skinny navy dotted tie,Translation Error
+4447,FLR-100-09,Red floral tie,Translation Error
+4469,FLR-200-07,Skinny brown floral tie,Translation Error
+4470,FLR-200-09,Skinny red floral tie,Translation Error
+4488,FTG100-13,Pink & black striped tie,Translation Error
+4489,FTG100-3,Blue & silver striped tie,Translation Error
+4490,FTG100-4,Orange & white striped tie,Translation Error
+4491,FTG100-5,Light blue & white striped tie,Translation Error
+4494,FTG100-9,Green & yellow striped tie,Translation Error
+4521,HB-200-01,Grey tie Herringbone,Translation Error
+4545,ITS100-03,Light blue tie Borgio,Translation Error
+4547,ITS100-05,Purple dotted tie Lago,Translation Error
+4548,ITS100-06,Brown floral tie Spezia,Translation Error
+4549,ITS100-07,Brown dotted tie Lago,Translation Error
+4550,ITS100-08,Navy paisley tie Rocca,Translation Error
+4551,ITS100-09,Navy striped tie Taormina,Translation Error
+4553,ITS100-11,Brown paisley tie Rocca,Translation Error
+4554,ITS100-112,Green tie Camo,Translation Error
+4555,ITS100-12,Navy paisley tie Rocca,Translation Error
+4557,ITS100-32,Brown tie Veneto,Translation Error
+4558,ITS100-34,Moss green tie Elegante,Translation Error
+4559,ITS100-35,Brown tie Herringbone,Translation Error
+4560,ITS100-36,Green tie Herringbone,Translation Error
+4561,ITS100-37,Blue tie Herringbone,Translation Error
+4562,ITS100-38,Grey tie Herringbone,Translation Error
+4563,ITS100-39,Burgundy tie Herringbone,Translation Error
+4564,ITS100-40,Brown tie Herringbone,Translation Error
+4565,ITS100-42,Navy Christmas tie,Translation Error
+4566,ITS100-43,Green Christmas tie,Translation Error
+4567,ITS100-44,Burgundy Christmas tie,Translation Error
+4568,ITS100-45,Black Christmas tie,Translation Error
+4569,ITS100-46,Navy Christmas tie Santas,Translation Error
+4570,ITS100-47,Dark brown tie Elegante,Translation Error
+4571,ITS100-49,Navy paisley tie Toscana,Translation Error
+4572,ITS100-51,Green striped tie Umbria,Translation Error
+4573,ITS100-52,Navy striped tie Umbria,Translation Error
+4574,ITS100-56,Orange floral tie Fiori,Translation Error
+4575,ITS100-57,Light blue floral tie Fiori,Translation Error
+4576,ITS100-58,Green floral tie Fiori,Translation Error
+4577,ITS100-59,Navy floral tie Fiori,Translation Error
+4578,ITS100-62,Brown tie Elegante,Translation Error
+7078,ITS100-65,Navy tie Grenadine,Translation Error
+4579,ITS200-35,Skinny dark brown tie herrringbone,Translation Error
+4580,ITS200-36,Skinny dark green tie herringbone,Translation Error
+4581,ITS200-37,Skinny navy tie herringbone,Translation Error
+4582,ITS200-38,Skinny dark grey tie Herringbone,Translation Error
+4583,ITS200-39,Skinny burgundy tie herringbone,Translation Error
+4584,ITS200-40,Skinny brown tie herringbone,Translation Error
+4586,ITS200-47,Skinny dark brown tie herringbone,Translation Error
+4587,ITS200-62,Skinny brown tie elegante,Translation Error
+4792,KWD200-9,Skinny brown dotted tie knitted,Translation Error
+4824,NO-100-03,Navy tie Ducks,Translation Error
+4825,NO-100-04,Navy tie Pineapple,Translation Error
+4831,NO-100-13,Navy tie Deer,Translation Error
+4832,NO-100-14,Silver tie Leopard,Translation Error
+4834,NO-100-17,Navy tie Bike,Translation Error
+4835,NO-100-18,Navy tie Guns & Lips,Translation Error
+4837,NO-100-20,Navy tie Flamingo,Translation Error
+4838,NO-100-24,Burgundy Tie German Flags,Translation Error
+4839,NO-100-26,Navy tie Swedish Flags,Translation Error
+4849,NO-150-37,Navy tie Guitars,Translation Error
+5714,P100-100,White tie Basic,Translation Error
+5715,P100-102,Orange tie Basic,Translation Error
+5716,P100-103,Red tie Basic,Translation Error
+5720,P100-108,Turquoise tie Basic,Translation Error
+5722,P100-110,Blue tie Basic,Translation Error
+5725,P100-114,Beige tie Basic,Translation Error
+5728,P100-118,Silver tie Basic,Translation Error
+5731,P100-123,Mint green tie Basic,Translation Error
+5732,P100-124,Apricot tie Basic,Translation Error
+5733,P100-125,Dark pink tie Basic,Translation Error
+5734,P100-128,Mint blue tie Basic,Translation Error
+5735,P100-131,Fuchsia tie Basic,Translation Error
+5736,P100-133,Teal tie Basic,Translation Error
+5738,P100-139,Light pink tie Basic,Translation Error
+5739,P100-140,Red tie Basic,Translation Error
+5740,P100-144,Gold tie Basic,Translation Error
+5773,P3100-13,White dotted tie,Translation Error
+5775,P3100-3,Black dotted tie,Translation Error
+5776,P3100-5,Dark purple dotted tie,Translation Error
+5777,P3100-6,Blue dotted tie,Translation Error
+5779,P3100-9,Light blue dotted tie,Translation Error
+5781,P3200-10,Skinny yellow dotted tie,Translation Error
+5783,P3200-12,Skinny grey dotted tie,Translation Error
+5784,P3200-13,Skinny white dotted tie,Translation Error
+5786,P3200-2,Skinny navy dotted tie,Translation Error
+5787,P3200-3,Skinny black dotted tie,Translation Error
+5788,P3200-5,Skinny dark purple dotted tie,Translation Error
+5789,P3200-6,Skinny blue dotted tie,Translation Error
+5791,P3200-8,Skinny green dotted tie,Translation Error
+5792,P3200-9,Skinny light blue dotted tie,Translation Error
+5870,PFL-100-122,Blue paisley tie,Translation Error
+5874,PFL-100-185,Red floral tie,Translation Error
+5875,PFL-100-186,Purple floral tie,Translation Error
+5877,PFL-100-282,Navy dotted tie,Translation Error
+5906,PSLY100-218,Silver paisley tie,Translation Error
+5910,PSLY200-201,Skinny white paisley tie,Translation Error
+5916,PSLY200-239,Skinny pink paisley tie,Translation Error
+5954,PSS-100-01,Red paisley tie,Translation Error
+5955,PSS-100-02,Brown paisley tie,Translation Error
+5956,PSS-100-03,Blue paisley tie,Translation Error
+6002,SA100-10,Blue tie Satin,Translation Error
+6003,SA100-21,Pink tie Satin,Translation Error
+6352,VE100-01,White tie Bexton,Translation Error
+6353,VE100-03,Silver tie Bexton,Translation Error
+6354,VE100-04,Silver tie Damask,Translation Error
+6355,VE100-05,Black tie Damask,Translation Error
+6356,VE100-06,Champagne tie Damask,Translation Error
+6361,VE100-07,Off white tie Damask,Translation Error
+6362,VE100-08-,White tie Damask,Translation Error
+6363,VE100-09,White tie Niels,Translation Error
+6364,VE100-10,Silver tie Niels,Translation Error
+6365,VE100-10-02,Boys champagne tie Bexton,Translation Error
+6368,VE100-10-05,Boys black tie Damask,Translation Error
+6369,VE100-10-06,Boys champagne tie Damask,Translation Error
+6370,VE100-10-07,Boys off white tie Damask,Translation Error
+6371,VE100-10-08-,Boys white tie Damask,Translation Error
+6372,VE100-10-09,Boys white tie Niels,Translation Error
+6373,VE100-10-10,Boys silver tie Niels,Translation Error
+6374,VE100-10-11,Boys champagne tie Niels,Translation Error
+6375,VE100-10-12,Boys white tie Oscar,Translation Error
+6376,VE100-10-13,Boys silver tie Oscar,Translation Error
+6377,VE100-10-14,Boys off white tie Oscar,Translation Error
+6378,VE100-10-15,Boys navy tie Damask,Translation Error
+6380,VE100-10-16,Boys burgundy tie Damask,Translation Error
+6381,VE100-10-17,Boys gold tie Damask,Translation Error
+6382,VE100-11,Champagne tie Niels,Translation Error
+6383,VE100-12,White tie Oscar,Translation Error
+6384,VE100-13,Silver tie Oscar,Translation Error
+6386,VE100-15,Navy tie Damask,Translation Error
+6387,VE100-15-1,Navy tie Oscar,Translation Error
+6388,VE100-16,Burgundy tie Damask,Translation Error
+6389,VE100-17,Gold tie Damask,Translation Error
+6390,VE100-18,Black tie Satin,Translation Error
+6391,VE100-20-01,Boys white tie Bexton,Translation Error
+6392,VE100-20-02,Boys champagne tie Bexton,Translation Error
+6393,VE100-20-03,Boys silver tie Bexton,Translation Error
+6394,VE100-20-04,Boys silver tie Damask,Translation Error
+6395,VE100-20-05,Boys black tie Damask,Translation Error
+6396,VE100-20-06,Boys champagne tie Damask,Translation Error
+6397,VE100-20-07,Boys off white tie Damask,Translation Error
+6398,VE100-20-08,Boys white tie Damask,Translation Error
+6399,VE100-20-09,Boys white tie Niels,Translation Error
+6400,VE100-20-10,Boys silver tie Niels,Translation Error
+6401,VE100-20-11,Boys champagne tie Niels,Translation Error
+6402,VE100-20-12,Boys white Oscar,Translation Error
+6403,VE100-20-13,Boys silver tie Oscar,Translation Error
+6404,VE100-20-14,Boys off white tie Oscar,Translation Error
+6405,VE100-20-15,Boys navy tie Damask,Translation Error
+6407,VE100-20-17,Boys gold tie Damask,Translation Error
+6480,VE200-01,Skinny white tie bexton,Translation Error
+6481,VE200-02,Skinny champagne tie bexton,Translation Error
+6482,VE200-03,Skinny silver tie bexton,Translation Error
+6483,VE200-04,Skinny silver tie damask,Translation Error
+6484,VE200-05,Skinny black tie damask,Translation Error
+6485,VE200-06,Skinny champagne tie damask,Translation Error
+6486,VE200-07,Skinny off white tie damask,Translation Error
+6487,VE200-08,Skinny white tie damask,Translation Error
+6488,VE200-09,Skinny white tie niels,Translation Error
+6489,VE200-10,Skinny silver tie niels,Translation Error
+6491,VE200-12,Skinny white tie oscar,Translation Error
+6492,VE200-14,Skinny off white tie oscar,Translation Error
+6493,VE200-15,Skinny navy tie damask,Translation Error
+6494,VE200-15-1,Skinny navy tie oscar,Translation Error
+6584,VLT-100-17,Burgundy tie Velvet,Translation Error
+6646,XM-700-2,Boys navy Christmas tie Reindeer,Translation Error
+6647,XM-700-4,Boys navy Christmas tie Rudolf,Translation Error
+6648,XM-700-6,Boys green Christmas tie Santa,Translation Error
+6649,XM-800-2,Boys navy Christmas tie Reindeer,Translation Error
+6650,XM-800-4,Boys navy Christmas tie Rudolf,Translation Error
+6651,XM-800-5,Boys red Christmas tie Festive,Translation Error
+6652,XM-800-6,Boys green Christmas tie Festive,Translation Error
+6653,XM100-10,Red Christmas tie Penguin,Translation Error
+6654,XM100-11,Red Christmas tie Celebrations,Translation Error
+6655,XM100-12,Red Christmas tie Dogs,Translation Error
+6657,XM100-14,Burgundy Christmas tie Decor,Translation Error
+6658,XM100-7,Christmas tie Elfs,Translation Error
+6660,XM100-9,Blue Christmas tie Happy Santa,Translation Error

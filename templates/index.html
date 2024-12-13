@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Tool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="creative-title">Translation Tool</h1>
+        <nav>
+            <a href="{{ url_for('index') }}" class="nav-button home">Home</a>
+            <a href="{{ url_for('show_language_config') }}" class="nav-button">Configure Languages</a>
+            <a href="{{ url_for('logout') }}" class="nav-button">Logout</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="button-group top-actions">
+            <button type="button" class="reset-btn" onclick="window.location.reload()">Reset</button>
+        </div>
+        <form id="uploadForm" enctype="multipart/form-data" class="card">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+            
+            <div class="form-group">
+                <label for="input_file">Upload your input file:</label>
+                <span class="example-link" onclick="showExample('input-v1')">example</span>
+                <input type="file" name="input_file" id="input_file" class="form-control" required accept=".csv">
+                <div id="input-file-preview" class="file-preview"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="examples_file">Upload examples file:</label>
+                <span class="example-link" onclick="showExample('examples')">example</span>
+                <input type="file" name="examples_file" id="examples_file" class="form-control" required accept=".csv">
+                <div id="examples-file-preview" class="file-preview"></div>
+            </div>
+
+            <div id="language-options" style="display: none;">
+                <p>Select target languages:</p>
+                <div id="language-checkboxes" class="checkbox-container"></div>
+            </div>
+
+            <input type="hidden" name="action" id="action" value="">
+            <div class="form-actions">
+                <button type="submit" id="translateDisplayNames" class="btn disabled" disabled onclick="setAction('translate_titles')">Translate Display Names</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <div id="toast" class="toast">
+        <button class="close-btn">&times;</button>
+    </div>
+
+    <div id="progress-container" style="display:none;">
+        <h2>Translation Progress</h2>
+        <div id="progress-bars"></div>
+    </div>
+
+    <!-- Popup containers -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="example-popup" id="input-v1-example">
+        <span class="close-popup" onclick="hideExample('input-v1')">&times;</span>
+        <h3>Input File Example</h3>
+        <pre>
+Product ID,SKU,Display Name
+1001,CL-001,Cufflinks Vienna
+1002,CL-002,Cufflinks Deluxe
+1003,TIE-001,Classic Silk Tie Navy
+        </pre>
+    </div>
+
+    <div class="example-popup" id="examples-example">
+        <span class="close-popup" onclick="hideExample('examples')">&times;</span>
+        <h3>Examples File Example</h3>
+        <pre>
+Display Name,Display name - sv,Display name - no,Display name - da
+Cufflinks Vienna,Manschettknappar Vienna,Mansjettknapper Vienna,Manchetknapper Vienna
+Cufflinks Deluxe,Manschettknappar Deluxe,Mansjettknapper Deluxe,Manchetknapper Deluxe
+Classic Silk Tie Navy,Klassisk Sidenslips Marinblå,Klassisk Silkeslips Marine,Klassisk Silkeslips Marine
+        </pre>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

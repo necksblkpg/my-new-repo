@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Tool Instructions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #000000;
+            --background-color: #f5f5f5;
+            --text-color: #000000;
+            --card-background: #ffffff;
+            --border-color: #dcdcdc;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .file-requirements {
+            padding: 20px;
+            background-color: var(--card-background);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .example-table {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .example-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+
+        .example-table th, .example-table td {
+            border: 1px solid var(--border-color);
+            padding: 8px;
+            text-align: left;
+        }
+
+        .example-table th {
+            background-color: var(--background-color);
+            font-weight: 600;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            margin: 20px 0 10px 0;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Translation Tool Instructions</h1>
+
+        <div class="file-requirements">
+            <h2>1. File Requirements</h2>
+
+            <h3>Input File Format (CSV)</h3>
+            <ul>
+                <li>Required columns: "Product ID", "SKU", "Description"</li>
+                <li>File must be in CSV format with comma (,) as separator</li>
+            </ul>
+
+            <div class="example-table">
+                <h4>Example Input File:</h4>
+                <table>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>SKU</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>1195</td>
+                        <td>130-15R</td>
+                        <td>Elegant cufflinks with a modern Vienna design, perfect for formal occasions.</td>
+                    </tr>
+                    <tr>
+                        <td>6890</td>
+                        <td>152­18R2</td>
+                        <td>Deluxe cufflinks featuring premium materials and sophisticated styling.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Examples File Format (CSV)</h3>
+            <ul>
+                <li>Must have "Display Name" column with original text</li>
+                <li>Translation columns must follow format: "Display name - [language code]"</li>
+                <li>Language codes are configured in the Language Configuration page</li>
+            </ul>
+
+            <div class="example-table">
+                <h4>Example Translation File:</h4>
+                <table>
+                    <tr>
+                        <th>Display Name</th>
+                        <th>Display name - sv</th>
+                        <th>Display name - no</th>
+                        <th>Display name - da</th>
+                    </tr>
+                    <tr>
+                        <td>Cufflinks Vienna</td>
+                        <td>Manschettknappar Vienna</td>
+                        <td>Mansjettknapper Vienna</td>
+                        <td>Manchetknapper Vienna</td>
+                    </tr>
+                    <tr>
+                        <td>Cufflinks Deluxe</td>
+                        <td>Manschettknappar Deluxe</td>
+                        <td>Mansjettknapper Deluxe</td>
+                        <td>Manchetknapper Deluxe</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="file-requirements">
+            <h2>2. Language Configuration</h2>
+            <ul>
+                <li>Available languages are managed in the Language Configuration page</li>
+                <li>Each language must have a unique language code (e.g., 'sv' for Swedish)</li>
+                <li>The language codes in your Examples File must match those in the configuration</li>
+                <li>Go to Language Configuration to add, remove, or modify available languages</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

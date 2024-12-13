@@ -1,0 +1,401 @@
+Product ID,SKU,Display Name
+1033,100-01,White tie
+1034,100-02,Orange tie
+1035,100-04,Burgundy tie
+1036,100-05,Dark purple tie
+1037,100-06,Purple tie
+1038,100-07,Light purple tie
+1039,100-08,Turquoise tie
+1040,100-09,Navy tie
+1041,100-10,Blue tie
+1042,100-10-01,Boys white tie
+1044,100-10-02-Satin,Boys orange tie Satin
+1045,100-10-04,Boys burgundy tie
+1046,100-10-05,Boys dark purple tie
+1047,100-10-06,Boys purple tie
+1048,100-10-07,Boys light purple tie
+1049,100-10-08,Boys turquoise tie
+1050,100-10-09,Boys navy tie
+1051,100-10-10,Boys blue tie
+1053,100-10-13,Boys dark yellow tie
+1054,100-10-14,Boys creme gold tie
+1055,100-10-14-Satin,Boys creme gold tie Satin
+1056,100-10-15,Boys black tie
+1057,100-10-16,Boys lime green tie
+1058,100-10-17,Boys dark green tie
+1059,100-10-18,Boys dark silver tie
+1060,100-10-19,Boys dark brown tie
+1061,100-10-20,Boys dark pink tie
+1062,100-10-21,Boys light pink tie
+1063,100-10-22,Boys brown tie
+1064,100-10-23,Boys mint green tie
+1066,100-10-25,Boys dark coral tie
+1067,100-10-25-Satin,Boys dark coral tie Satin
+1068,100-10-26,Boys rust orange tie
+1069,100-10-29,Boys olive green tie
+1070,100-10-31,Boys cerise pink tie
+1071,100-10-33,Boys teal tie
+1072,100-10-35,Boys dark burgundy tie
+1073,100-10-37,Boys light coral tie
+1074,100-10-38,Boys light yellow tie
+1075,100-10-39,Boys extra light pink tie
+1076,100-10-40,Boys red tie
+1077,100-10-41,Boys green tie
+1079,100-10-44,Boys bronze tie
+1080,100-10-45,Boys silver tie
+1081,100-10-46,Boys yellow tie
+1082,100-10-48,Boys coral tie
+1084,100-10-51,Boys midnight navy tie
+1085,100-10-52,Boys rose purple tie
+1086,100-10-53,Boys old pink tie
+1089,100-10-56,Boys salmon pink tie
+1090,100-11,Light blue tie
+1091,100-13,Dark yellow tie
+1092,100-14,Creme gold tie
+1093,100-15,Black tie
+1094,100-16,Lime green tie
+1095,100-17,Dark green tie
+1096,100-18,Dark silver tie
+1097,100-19,Dark brown tie
+1098,100-20-01,Boys white tie
+1099,100-20-02,Boys orange tie
+1100,100-20-03,Boys light red tie
+1102,100-20-05,Boys dark purple tie
+1103,100-20-05-1,Boys dark purple tie Satin
+1104,100-20-06,Boys purple tie
+1105,100-20-07,Boys light purple tie
+1106,100-20-07-1,Boys light purple tie Satin
+1107,100-20-08,Boys turquoise tie
+1109,100-20-13,Boys dark yellow tie
+1110,100-20-14,Boys creme gold tie
+1112,100-20-16,Boys lime green tie
+1114,100-20-18,Boys dark silver tie
+1116,100-20-20,Boys dark pink tie
+1117,100-20-21,Boys light pink tie
+1118,100-20-21-new,Boys light pink tie
+1119,100-20-23,Boys mint green tie
+1120,100-20-24,Boys apricot tie
+1121,100-20-25,Boys dark coral tie
+1122,100-20-26,Boys rust orange tie
+1123,100-20-28,Boys mint blue tie
+1124,100-20-31,Boys cerise pink tie
+1125,100-20-33,Boys teal tie
+1126,100-20-35,Boys burgundy tie
+1127,100-20-37,Boys light coral tie
+1128,100-20-38,Boys light yellow tie
+1129,100-20-39,Boys extra light pink tie
+1131,100-20-41,Boys green tie
+1132,100-20-43,Boys gold tie
+1133,100-20-44,Boys bronze tie
+1134,100-20-45,Boys silver tie
+1135,100-20-46,Boys yellow tie
+1136,100-20-48,Boys coral tie
+1137,100-20-50,Boys grey tie
+1138,100-20-51,Boys midnight navy tie
+1139,100-20-52,Boys rose purple tie
+1140,100-20-53,Boys old pink tie
+1141,100-20-53-1,Boys old pink tie
+1142,100-20-54,Boys light green tie
+1143,100-20-56,Boys salmon pink tie
+1144,100-20-58,Boys grey tie
+1145,100-21,Light pink tie
+1146,100-22,Brown tie
+1147,100-24,Apricot tie
+1148,100-26,Rust orange tie
+1149,100-27,Mustard yellow tie
+1151,100-29,Olive green tie
+1152,100-31,Cerise pink tie
+1153,100-33,Teal tie
+1155,100-38,Light yellow tie
+1156,100-39,Extra light pink tie
+1157,100-40,Red tie
+1158,100-41,Green tie
+1159,100-44,Bronze tie
+1160,100-45,Silver tie
+1162,100-50,Grey tie
+1163,100-51,Midnight navy tie
+1164,100-52,Rose purple tie
+1165,100-53,Old pink tie
+1166,100-55,Off white tie
+1167,100-56,Salmon pink tie
+1168,100-XL-01,White tie XL
+1179,1100-20-31,Boys burgundy dotted tie
+1190,1200-01,Extra skinny white tie
+1191,1200-04,Extra skinny burgundy tie
+1192,1200-09,Extra skinny navy tie
+1193,1200-15,Extra skinny black tie
+1194,1200-39,Extra skinny extra light pink tie
+1201,200-01,Skinny white tie
+1202,200-02,Skinny orange tie
+1203,200-03,Skinny light red tie
+1204,200-04,Skinny burgundy tie
+1205,200-05,Skinny dark purple tie
+1206,200-06,Skinny purple tie
+1207,200-07,Skinny light purple tie
+1208,200-08,Skinny turquoise tie
+1209,200-09,Skinny navy tie
+1210,200-10,Skinny blue tie
+1211,200-11,Skinny light blue tie
+1212,200-13,Skinny dark yellow tie
+1213,200-14,Skinny creme gold tie
+1214,200-15,Skinny black tie
+1215,200-16,Skinny lime green tie
+1216,200-17,Skinny dark green tie
+1217,200-18,Skinny dark silver tie
+1218,200-19,Skinny dark brown tie
+1219,200-21,Skinny light pink tie
+1220,200-22,Skinny brown tie
+1221,200-23,Skinny mint green tie
+1222,200-24,Skinny apricot tie
+1223,200-26,Skinny rust orange tie
+1224,200-27,Skinny mustard yellow tie
+1225,200-28,Skinny mint blue tie
+1226,200-29,Skinny olive green tie
+1227,200-31,Skinny cerise pink tie
+1228,200-33,Skinny teal tie
+1230,200-38,Skinny light yellow tie
+1231,200-39,Skinny extra light pink tie
+1232,200-40,Skinny red tie
+1233,200-41,Skinny green tie
+1235,200-44,Skinny bronze tie
+1236,200-45,Skinny silver tie
+1237,200-46,Skinny yellow tie
+1240,200-50,Skinny grey tie
+1241,200-51,Skinny midnight navy tie
+1242,200-52,Skinny rose purple tie
+1243,200-53,Skinny old pink tie
+1244,200-55,Skinny off white tie
+1245,200-56,Skinny salmon pink tie
+1246,200-57,Skinny pink tie
+1380,3100-49,Purple paisley tie
+1382,3100-56-NEW,Pink dotted tie
+1389,3200-32,Skinny navy dotted tie
+1390,3200-33,Skinny black dotted tie
+1393,3200-43,Skinny red floral tie
+1394,3200-44,Skinny blue floral tie
+1395,3200-47,Skinny blue paisley tie
+1396,3200-48,Skinny blue paisley tie
+1397,3200-49,Skinny purple paisley tie
+1398,3200-50,Skinny blue striped tie
+1399,3200-51,Skinny white paisley tie
+1400,3200-52,Skinny navy paisley tie
+1401,3200-54,Skinny white floral tie
+1403,3200-60,Skinny red paisley tie
+1404,3200-61,Skinny black paisley tie
+1406,3200-63,Skinny red paisley tie
+1407,3200-70,Skinny red tie vernier
+4181,BS-100-01,Black dotted tie
+4186,BS-200-01,Skinny black dotted tie
+4188,BS-200-03,Skinny blue dotted tie
+4189,BS-200-04,Skinny black dotted tie
+4191,BS-200-08,Skinny purple dotted tie
+4192,BS-200-09,Skinny red dotted tie
+4209,BSB-100-01,Blue dotted tie
+4210,BSB-100-02,Blue dotted tie
+4211,BSB-200-02,Skinny blue dotted tie
+4212,BSB-200-03,Skinny grey dotted tie
+4241,C100-16,Purple tie
+4244,C100-2,Light blue tie
+4246,C100-22,Red striped tie
+4247,C100-4,Blue striped tie
+4248,C100-5,Brown striped tie
+4249,C100-8,Blue tie
+4273,CHR-100-01,Navy Christmas tie Santa
+4274,CHR-100-02,Green Christmas tie Santa
+4275,CHR-100-03,Burgundy Christmas tie Santa
+4276,CHR-100-04,Red Christmas tie Snowmen
+4277,CHR-100-05,Blue Christmas tie Snowman
+4278,CHR-100-07,Green Christmas tie Rudolf
+4281,CHR-100-10-01,Boys blue Christmas tie Santa
+4282,CHR-100-10-02,Boys green Christmas tie Santa
+4283,CHR-100-10-03,Boys burgundy Christmas tie Santa
+4284,CHR-100-11,Navy Christmas tie Tree
+4285,CHR-100-12,Blue Christmas tie Merry
+4286,CHR-100-13,Navy Christmas tie Penguin
+4287,CHR-100-14,Red Christmas tie Penguin
+4288,CHR-100-15,Navy Christmas tie Tree
+4289,CHR-100-16,Red Christmas tie Tree
+4371,DT-100-03,Purple dotted tie
+4372,DT-100-06,Blue dotted tie
+4374,DT-200-03,Skinny purple dotted tie
+4375,DT-200-05,Skinny teal dotted tie
+4376,DT-200-06,Skinny blue dotted tie
+4378,DT-200-08,Skinny green dotted tie
+4379,DT-200-09,Skinny navy dotted tie
+4447,FLR-100-09,Red floral tie
+4469,FLR-200-07,Skinny brown floral tie
+4470,FLR-200-09,Skinny red floral tie
+4488,FTG100-13,Pink & black striped tie
+4489,FTG100-3,Blue & silver striped tie
+4490,FTG100-4,Orange & white striped tie
+4491,FTG100-5,Light blue & white striped tie
+4494,FTG100-9,Green & yellow striped tie
+4521,HB-200-01,Grey tie Herringbone
+4545,ITS100-03,Light blue tie Borgio
+4547,ITS100-05,Purple dotted tie Lago
+4548,ITS100-06,Brown floral tie Spezia
+4549,ITS100-07,Brown dotted tie Lago
+4550,ITS100-08,Navy paisley tie Rocca
+4551,ITS100-09,Navy striped tie Taormina
+4553,ITS100-11,Brown paisley tie Rocca
+4554,ITS100-112,Green tie Camo
+4555,ITS100-12,Navy paisley tie Rocca
+4557,ITS100-32,Brown tie Veneto
+4558,ITS100-34,Moss green tie Elegante
+4559,ITS100-35,Brown tie Herringbone
+4560,ITS100-36,Green tie Herringbone
+4561,ITS100-37,Blue tie Herringbone
+4562,ITS100-38,Grey tie Herringbone
+4563,ITS100-39,Burgundy tie Herringbone
+4564,ITS100-40,Brown tie Herringbone
+4565,ITS100-42,Navy Christmas tie
+4566,ITS100-43,Green Christmas tie
+4567,ITS100-44,Burgundy Christmas tie
+4568,ITS100-45,Black Christmas tie
+4569,ITS100-46,Navy Christmas tie Santas
+4570,ITS100-47,Dark brown tie Elegante
+4571,ITS100-49,Navy paisley tie Toscana
+4572,ITS100-51,Green striped tie Umbria
+4573,ITS100-52,Navy striped tie Umbria
+4574,ITS100-56,Orange floral tie Fiori
+4575,ITS100-57,Light blue floral tie Fiori
+4576,ITS100-58,Green floral tie Fiori
+4577,ITS100-59,Navy floral tie Fiori
+4578,ITS100-62,Brown tie Elegante
+7078,ITS100-65,Navy tie Grenadine
+4579,ITS200-35,Skinny dark brown tie herrringbone
+4580,ITS200-36,Skinny dark green tie herringbone
+4581,ITS200-37,Skinny navy tie herringbone
+4582,ITS200-38,Skinny dark grey tie Herringbone
+4583,ITS200-39,Skinny burgundy tie herringbone
+4584,ITS200-40,Skinny brown tie herringbone
+4586,ITS200-47,Skinny dark brown tie herringbone
+4587,ITS200-62,Skinny brown tie elegante
+4792,KWD200-9,Skinny brown dotted tie knitted
+4824,NO-100-03,Navy tie Ducks
+4825,NO-100-04,Navy tie Pineapple
+4831,NO-100-13,Navy tie Deer
+4832,NO-100-14,Silver tie Leopard
+4834,NO-100-17,Navy tie Bike
+4835,NO-100-18,Navy tie Guns & Lips
+4837,NO-100-20,Navy tie Flamingo
+4838,NO-100-24,Burgundy Tie German Flags
+4839,NO-100-26,Navy tie Swedish Flags
+4849,NO-150-37,Navy tie Guitars
+5714,P100-100,White tie Basic
+5715,P100-102,Orange tie Basic
+5716,P100-103,Red tie Basic
+5720,P100-108,Turquoise tie Basic
+5722,P100-110,Blue tie Basic
+5725,P100-114,Beige tie Basic
+5728,P100-118,Silver tie Basic
+5731,P100-123,Mint green tie Basic
+5732,P100-124,Apricot tie Basic
+5733,P100-125,Dark pink tie Basic
+5734,P100-128,Mint blue tie Basic
+5735,P100-131,Fuchsia tie Basic
+5736,P100-133,Teal tie Basic
+5738,P100-139,Light pink tie Basic
+5739,P100-140,Red tie Basic
+5740,P100-144,Gold tie Basic
+5773,P3100-13,White dotted tie
+5775,P3100-3,Black dotted tie
+5776,P3100-5,Dark purple dotted tie
+5777,P3100-6,Blue dotted tie
+5779,P3100-9,Light blue dotted tie
+5781,P3200-10,Skinny yellow dotted tie
+5783,P3200-12,Skinny grey dotted tie
+5784,P3200-13,Skinny white dotted tie
+5786,P3200-2,Skinny navy dotted tie
+5787,P3200-3,Skinny black dotted tie
+5788,P3200-5,Skinny dark purple dotted tie
+5789,P3200-6,Skinny blue dotted tie
+5791,P3200-8,Skinny green dotted tie
+5792,P3200-9,Skinny light blue dotted tie
+5870,PFL-100-122,Blue paisley tie
+5874,PFL-100-185,Red floral tie
+5875,PFL-100-186,Purple floral tie
+5877,PFL-100-282,Navy dotted tie
+5906,PSLY100-218,Silver paisley tie
+5910,PSLY200-201,Skinny white paisley tie
+5916,PSLY200-239,Skinny pink paisley tie
+5954,PSS-100-01,Red paisley tie
+5955,PSS-100-02,Brown paisley tie
+5956,PSS-100-03,Blue paisley tie
+6002,SA100-10,Blue tie Satin
+6003,SA100-21,Pink tie Satin
+6352,VE100-01,White tie Bexton
+6353,VE100-03,Silver tie Bexton
+6354,VE100-04,Silver tie Damask
+6355,VE100-05,Black tie Damask
+6356,VE100-06,Champagne tie Damask
+6361,VE100-07,Off white tie Damask
+6362,VE100-08-,White tie Damask
+6363,VE100-09,White tie Niels
+6364,VE100-10,Silver tie Niels
+6365,VE100-10-02,Boys champagne tie Bexton
+6368,VE100-10-05,Boys black tie Damask
+6369,VE100-10-06,Boys champagne tie Damask
+6370,VE100-10-07,Boys off white tie Damask
+6371,VE100-10-08-,Boys white tie Damask
+6372,VE100-10-09,Boys white tie Niels
+6373,VE100-10-10,Boys silver tie Niels
+6374,VE100-10-11,Boys champagne tie Niels
+6375,VE100-10-12,Boys white tie Oscar
+6376,VE100-10-13,Boys silver tie Oscar
+6377,VE100-10-14,Boys off white tie Oscar
+6378,VE100-10-15,Boys navy tie Damask
+6380,VE100-10-16,Boys burgundy tie Damask
+6381,VE100-10-17,Boys gold tie Damask
+6382,VE100-11,Champagne tie Niels
+6383,VE100-12,White tie Oscar
+6384,VE100-13,Silver tie Oscar
+6386,VE100-15,Navy tie Damask
+6387,VE100-15-1,Navy tie Oscar
+6388,VE100-16,Burgundy tie Damask
+6389,VE100-17,Gold tie Damask
+6390,VE100-18,Black tie Satin
+6391,VE100-20-01,Boys white tie Bexton
+6392,VE100-20-02,Boys champagne tie Bexton
+6393,VE100-20-03,Boys silver tie Bexton
+6394,VE100-20-04,Boys silver tie Damask
+6395,VE100-20-05,Boys black tie Damask
+6396,VE100-20-06,Boys champagne tie Damask
+6397,VE100-20-07,Boys off white tie Damask
+6398,VE100-20-08,Boys white tie Damask
+6399,VE100-20-09,Boys white tie Niels
+6400,VE100-20-10,Boys silver tie Niels
+6401,VE100-20-11,Boys champagne tie Niels
+6402,VE100-20-12,Boys white Oscar
+6403,VE100-20-13,Boys silver tie Oscar
+6404,VE100-20-14,Boys off white tie Oscar
+6405,VE100-20-15,Boys navy tie Damask
+6407,VE100-20-17,Boys gold tie Damask
+6480,VE200-01,Skinny white tie bexton
+6481,VE200-02,Skinny champagne tie bexton
+6482,VE200-03,Skinny silver tie bexton
+6483,VE200-04,Skinny silver tie damask
+6484,VE200-05,Skinny black tie damask
+6485,VE200-06,Skinny champagne tie damask
+6486,VE200-07,Skinny off white tie damask
+6487,VE200-08,Skinny white tie damask
+6488,VE200-09,Skinny white tie niels
+6489,VE200-10,Skinny silver tie niels
+6491,VE200-12,Skinny white tie oscar
+6492,VE200-14,Skinny off white tie oscar
+6493,VE200-15,Skinny navy tie damask
+6494,VE200-15-1,Skinny navy tie oscar
+6584,VLT-100-17,Burgundy tie Velvet
+6646,XM-700-2,Boys navy Christmas tie Reindeer
+6647,XM-700-4,Boys navy Christmas tie Rudolf
+6648,XM-700-6,Boys green Christmas tie Santa
+6649,XM-800-2,Boys navy Christmas tie Reindeer
+6650,XM-800-4,Boys navy Christmas tie Rudolf
+6651,XM-800-5,Boys red Christmas tie Festive
+6652,XM-800-6,Boys green Christmas tie Festive
+6653,XM100-10,Red Christmas tie Penguin
+6654,XM100-11,Red Christmas tie Celebrations
+6655,XM100-12,Red Christmas tie Dogs
+6657,XM100-14,Burgundy Christmas tie Decor
+6658,XM100-7,Christmas tie Elfs
+6660,XM100-9,Blue Christmas tie Happy Santa

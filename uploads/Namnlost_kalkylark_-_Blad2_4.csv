@@ -1,0 +1,362 @@
+Product ID,SKU,Display Name
+1256,2500-05,Blue handkerchief
+1257,2500-12,Grey handkerchief
+1259,2500-19,Grey handkerchief
+1260,2500-20,Burgundy striped handkerchief
+1459,3500-32,Navy dotted handkerchief
+1460,3500-33,Black dotted handkerchief
+1461,3500-37,Brown striped handkerchief
+1465,3500-72,Burgundy dotted handkerchief
+1466,3500-78,Navy dotted handkerchief
+1467,3500-82,Dark grey striped handkerchief
+1527,500-01,White handkerchief
+1528,500-02,Orange handkerchief
+1529,500-04,Burgundy handkerchief
+1530,500-05,Dark purple handkerchief
+1531,500-06,Purple handkerchief
+3948,500-07,Light purple handkerchief
+3949,500-08,Turquoise handkerchief
+3950,500-09,Navy handkerchief
+3951,500-10,Blue handkerchief
+3952,500-11,Light blue handkerchief
+3953,500-13,Dark yellow handkerchief
+3954,500-14,Creme gold handkerchief
+3955,500-15,Black handkerchief
+3956,500-16,Lime green handkerchief
+3957,500-17,Dark green handkerchief
+3958,500-18,Dark silver handkerchief
+3959,500-19,Dark brown handkerchief
+3960,500-21,Light pink handkerchief
+3961,500-22,Brown handkerchief
+3963,500-24,Apricot handkerchief
+3964,500-26,Rust orange handkerchief
+3965,500-27,Mustard yellow handkerchief
+3966,500-28,Mint blue handkerchief
+3967,500-29,Olive green handkerchief
+3968,500-31,Cerise pink handkerchief
+3969,500-33,Teal handkerchief
+3970,500-35,Dark burgundy handkerchief
+3971,500-37,Light coral handkerchief
+3972,500-38,Light yellow handkerchief
+3973,500-39,Extra light pink handkerchief
+3974,500-40,Red handkerchief
+3975,500-41,Green handkerchief
+3976,500-43,Gold handkerchief
+3977,500-44,Bronze handkerchief
+3978,500-45,Silver handkerchief
+3979,500-49,Mint yellow handkerchief
+3980,500-50,Grey handkerchief
+3981,500-51,Midnight navy handkerchief
+3982,500-52,Rose purple handkerchief
+3983,500-53,Old pink handkerchief
+3984,500-55,Off white handkerchief
+3985,500-56,Salmon pink handkerchief
+3986,500-58,Dark grey handkerchief
+4203,BS-500-02,Green dotted handkerchief
+4205,BS-500-04,Black dotted handkerchief
+4206,BS-500-05,Navy dotted handkerchief
+4207,BS-500-08,Purple dotted handkerchief
+4208,BS-500-09,Burgundy dotted handkerchief
+4218,BSB-500-02,Denim blue dotted handkerchief
+4219,BSB-500-03,Grey dotted handkerchief
+4259,C500-1,Light pink handkerchief
+4260,C500-11,Navy handkerchief
+4262,C500-19,Blue & white striped handkerchief
+4264,C500-21,Green & white striped handkerchief
+4265,C500-22,Red & white striped handkerchief
+4266,C500-4,Navy & white striped handkerchief
+4267,C500-5,Brown & white striped handkerchief
+4268,C500-6,Denim blue handkerchief
+4269,C500-8,Blue handkerchief
+4270,C550-16,Light purple handkerchief
+4271,C550-17,Turquoise green handkerchief
+4272,C550-18,Mint green handkerchief
+4297,CHR-500-01,Navy Christmas handkerchief Santa
+4298,CHR-500-02,Green Christmas handkerchief Santa
+4299,CHR-500-03,Burgundy Christmas handkerchief Santa
+4300,CHR-500-11,Blue Christmas handkerchief Tree
+4301,CHR-500-12,Blue Christmas handkerchief Merry
+4302,CHR-500-13,Navy Christmas handkerchief Penguin
+4303,CHR-500-14,Burgundy Christmas handkerchief Penguin
+4304,CHR-500-15,Navy Christmas handkerchief Tree
+4305,CHR-500-16,Hanky Christmas Tree & Santa
+4305,CHR-500-16,Hanky Christmas Tree and Santa Tie Burgundy
+4395,DT-500-01,Dark brown dotted handkerchief
+4396,DT-500-02,Teal dotted handkerchief
+4397,DT-500-03,Dark purple dotted handkerchief
+4399,DT-500-06,Blue dotted handkerchief Herringbone
+4421,FL-500-01,Brown floral handkerchief
+4423,FL-500-03,Red floral handkerchief
+4424,FL-500-04,Turquoise floral handkerchief
+4481,FLR-500-03,Navy & red floral handkerchief
+4482,FLR-500-05,Blue & orange floral handkerchief
+4483,FLR-500-09,Blue floral handkerchief
+4505,FTG500-1,Navy & silver striped handkerchief
+4506,FTG500-10,Green & black striped handkerchief
+4507,FTG500-11,Burgundy & navy striped handkerchief
+4508,FTG500-12,Blue & yellow striped handkerchief
+4509,FTG500-13,Black & pink striped handkerchief
+4510,FTG500-2,Red & white striped handkerchief
+4511,FTG500-3,Blue & silver striped handkerchief
+4512,FTG500-4,Orange & white striped handkerchief
+4513,FTG500-5,Blue & white striped handkerchief
+4514,FTG500-9,Green & yellow striped handkerchief
+4519,GD-500-01,Black handkerchief Grenadine
+4520,Hanky-R040-2,Navy handkerchief Flags
+4525,HB-500-01,Dark grey handkerchief Herringbone
+4644,ITS500-04,Navy floral handkerchief Spezia
+4645,ITS500-06,Dark brown floral handkerchief Spezia
+4646,ITS500-07,Brown dotted handkerchief Lago
+4647,ITS500-08,Navy paisley handkerchief Rocca
+7077,ITS500-09,Navy striped handkerchief Taormina
+4648,ITS500-100,Grey paisley handkerchief
+4649,ITS500-101,Navy & pink paisley handkerchief
+4650,ITS500-102,Blue & pink handkerchief
+4651,ITS500-103,White handkerchief Hand-rolled
+4652,ITS500-104,White handkerchief Oriental
+4653,ITS500-106,Navy dotted handkerchief Levante
+4654,ITS500-108,Green dotted handkerchief Levante
+4655,ITS500-109,White handkerchief Navy Border
+4656,ITS500-11,Brown paisley handkerchief Rocca
+4657,ITS500-110,White handkerchief orange Border
+4658,ITS500-111,White handkerchief dark green border
+4659,ITS500-112,Handkerchief Camo
+4660,ITS500-114,Beige & white paisley handkerchief San Vito
+4661,ITS500-115,Blue & white paisley handkerchief San Vito
+4662,ITS500-117,White handkerchief for Tailcoat
+4663,ITS500-118,Black handkerchief Premium
+4664,ITS500-119,White handkerchief Premium
+4665,ITS500-12,Navy paisley handkerchief Rocca
+4666,ITS500-14,Beige paisley handkerchief Rocca
+4667,ITS500-17,Navy paisley handkerchief Toscana
+4668,ITS500-18,Dark green paisley handkerchief Toscana
+4669,ITS500-19,Burgundy paisley handkerchief Toscana
+4670,ITS500-21,Light grey paisley handkerchief Bianco
+4671,ITS500-23,Navy paisley handkerchief Verezzi
+4672,ITS500-24,Blue paisley handkerchief Verezzi
+4673,ITS500-25,Red paisley handkerchief Verezzi
+4674,ITS500-26,Orange paisley handkerchief Verezzi
+4675,ITS500-27,Light green paisley handkerchief Verezzi
+4676,ITS500-29,Blue paisley handkerchief Cenis
+4677,ITS500-30,Navy handkerchief Hummingbirds
+4679,ITS500-33,Dark green paisley handkerchief Veneto
+4680,ITS500-34,Moss green handkerchief
+4681,ITS500-35,Dark brown handkerchief Herringbone
+4682,ITS500-36,Dark green handkerchief Herringbone
+4683,ITS500-37,Navy handkerchief Herringbone
+4685,ITS500-39,Burgundy handkerchief Herringbone
+4686,ITS500-40,Brown handkerchief Herringbone
+4687,ITS500-43,Dark green Christmas handkerchief
+4688,ITS500-45,Black Christmas handkerchief
+4689,ITS500-47,Dark brown handkerchief
+4690,ITS500-49,Navy paisley handkerchief
+4691,ITS500-50,Burgundy paisley handkerchief
+4692,ITS500-55,Beige floral handkerchief Summer Flowers
+4693,ITS500-56,Orange floral handkerchief Summer Flowers
+4694,ITS500-57,Light blue floral handkerchief Summer Flowers
+4695,ITS500-58,Dark green floral handkerchief Summer Flowers
+4696,ITS500-59,Navy floral handkerchief Summer Flowers
+4697,ITS500-60,Beige handkerchief Medallion
+4698,ITS500-61,Brown dotted handkerchief
+4699,ITS500-62,Brown handkerchief
+4700,ITS500-63,White paisley handkerchief Roma
+4701,ITS500-66,Navy paisley handkerchief
+4702,ITS500-67,Light pink paisley handkerchief
+4703,ITS500-68,Burgundy paisley handkerchief Como
+4704,ITS500-69,Yellow paisley handkerchief Como
+4705,ITS500-70,Light blue floral handkerchief Parrot
+4706,ITS500-71,White floral handkerchief Parrot
+4707,ITS500-72,Navy floral handkerchief
+4708,ITS500-73,Blue floral handkerchief
+4709,ITS500-76,Dark green floral handkerchief
+4710,ITS500-77,White floral handkerchief
+4711,ITS500-78,Navy handkerchief Pescara
+4712,ITS500-79,Green handkerchief Pescara
+4713,ITS500-80,Light blue handkerchief Pescara
+4714,ITS500-81,Light pink handkerchief Pescara
+4717,ITS500-84,Light blue handkerchief Sciacca
+4718,ITS500-85,White handkerchief Sciacca
+4719,ITS500-86,Beige handkerchief Sciacca
+4720,ITS500-87,Moss green handkerchief Sciacca
+4721,ITS500-88,Rust orange handkerchief Sciacca
+4722,ITS500-89,White paisley handkerchief
+4723,ITS500-90,Brown paisley handkerchief
+4724,ITS500-91,Mustard yellow paisley handkerchief
+4725,ITS500-92,Navy paisley handkerchief
+4726,ITS500-93,Orange paisley handkerchief
+4727,ITS500-94,Navy paisley handkerchief
+4728,ITS500-95,White paisley handkerchief
+4729,ITS500-96,Beige paisley handkerchief
+4730,ITS500-97,Grey dotted handkerchief
+4731,ITS500-98,Green handkerchief Napels
+4732,ITS500-99,Blue paisley handkerchief
+4775,KS500-10,Blue handkerchief Knitted
+6920,KS500-20,Pink handkerchief Knitted
+4776,KS500-51,Azur blue handkerchief Knitted
+4778,KS500-55,Light blue handkerchief Knitted
+4779,KS500-56,Dark pink handkerchief Knitted
+4788,KW500-4,Navy handkerchief Knitted
+4789,KW500-6,Grey handkerchief Knitted
+4790,KW500-7,Dark grey handkerchief Knitted
+5685,NO-500-01,Blue handkerchief Horses
+5686,NO-500-02,Blue handkerchief Airplanes
+5687,NO-500-03,Navy handkerchief Ducks
+5688,NO-500-04,Navy handkerchief Pineapples
+5689,NO-500-06,Burgundy handkerchief French Lily
+5690,NO-500-07,Green handkerchief Golf
+5691,NO-500-08,Blue handkerchief Crayfish
+5692,NO-500-09,Navy handkerchief Swedish Flags
+5693,NO-500-10,Navy handkerchief Pheasants
+5694,NO-500-11,Navy handkerchief Sailboats
+5695,NO-500-13,Navy handkerchief Deer
+5696,NO-500-14,Silver handkerchief Leopard
+5697,NO-500-18,Blue handkerchief Guns & Lips
+5698,NO-500-19,Black handkerchief Sharks
+5699,NO-500-20,Blue handkerchief Flamingo
+5700,NO-500-22,Blue handkerchief Danish Flags
+5701,NO-500-23,Blue handkerchief Finnish Flags
+5702,NO-500-24,Burgundy handkerchief German Flags
+5703,NO-500-27,Green handkerchief Deer
+5704,NO-500-28,Navy handkerchief Ducks
+5705,NO-500-29,Forest green handkerchief Ducks
+5706,NO-500-30,Blue handkerchief Music
+5707,NO-500-31,Dark green handkerchief Tennis
+5708,NO-500-32,Brown handkerchief Leopard
+5709,NO-500-34,Navy handkerchief Cars
+5710,NO-500-35,Navy handkerchief Motorcycles
+5711,NO-500-37,Navy handkerchief Guitars
+5712,NO-500-39,Navy handkerchief Eagles
+5713,NO-500-40,Yellow handkerchief Swedish National Team
+7083,O500-01,White handkerchief
+7084,O500-01,White handkerchief
+7085,O500-01,White handkerchief
+7098,O500-02,Orange handkerchief
+7095,O500-04,Burgundy handkerchief
+7119,O500-05,Dark purple handkerchief
+7118,O500-06,Purple handkerchief
+7120,O500-08,Turquoise handkerchief
+7090,O500-09,Navy handkerchief
+7091,O500-10,Blue handkerchief
+7094,O500-11,Light blue handkerchief
+7117,O500-13,Dark yellow handkerchief
+7092,O500-15,Black handkerchief
+7087,O500-17,Dark green handkerchief
+7116,O500-18,Dark silver handkerchief
+7096,O500-19,Dark brown handkerchief
+7115,O500-21,Light pink handkerchief
+7089,O500-22,Brown handkerchief
+7114,O500-27,Mustard yellow handkerchief
+7086,O500-29,Olive green handkerchief
+7093,O500-31,Cerise pink handkerchief
+7113,O500-33,Teal handkerchief
+7097,O500-38,Light yellow handkerchief
+7112,O500-39,Extra light pink handkerchief
+7099,O500-40,Red handkerchief
+7111,O500-45,Silver handkerchief
+7109,O500-50,Grey handkerchief
+7100,O500-51,Midnight navy handkerchief
+7110,O500-52,Rose purple handkerchief
+7088,O500-55,Off white handkerchief
+5811,P3500-12,Grey dotted handkerchief
+5812,P3500-13,White dotted handkerchief
+5813,P3500-14,Orange dotted handkerchief
+5814,P3500-2,Navy dotted handkerchief
+5815,P3500-3,Black dotted handkerchief
+5816,P3500-5,Dark purple dotted handkerchief
+5817,P3500-6,Blue dotted handkerchief
+5818,P3500-7,Red dotted handkerchief
+5819,P3500-9,Light blue dotted handkerchief
+5826,P500-100,White handkerchief
+5827,P500-102,Orange handkerchief
+5828,P500-103,Red handkerchief
+5829,P500-104,Burgundy handkerchief
+5830,P500-105,Dark purple handkerchief
+5831,P500-106,Purple handkerchief
+5832,P500-108,Turquoise handkerchief
+5833,P500-109,Navy handkerchief
+5834,P500-110,Blue handkerchief
+5835,P500-111,Light blue handkerchief
+5836,P500-113,Yellow handkerchief
+5837,P500-114,Creme gold handkerchief
+5838,P500-115,Black handkerchief
+5839,P500-116,Apple green handkerchief
+5840,P500-117,Dark green handkerchief
+5841,P500-118,Silver handkerchief
+5842,P500-120,Pink handkerchief
+5843,P500-121,Light pink handkerchief
+5844,P500-123,Mint green handkerchief
+5845,P500-124,Apricot handkerchief
+5846,P500-125,Dark pink handkerchief
+5847,P500-127,Creme yellow handkerchief
+5848,P500-128,Mint blue handkerchief
+5849,P500-131,Fuchsia handkerchief
+5850,P500-133,Teal handkerchief
+5851,P500-138,Light yellow handkerchief
+5852,P500-139,Extra light pink handkerchief
+5853,P500-140,Red handkerchief
+5854,P500-144,Gold handkerchief
+5855,P500-150,Off white handkerchief
+5856,P500-151,Ocean blue handkerchief
+5892,PFL-500-103,Blue striped handkerchief
+5893,PFL-500-104,Red striped handkerchief
+5894,PFL-500-122,Blue paisley handkerchief
+5895,PFL-500-181,Black floral handkerchief
+5896,PFL-500-182,Navy floral handkerchief
+5897,PFL-500-184,Burgundy floral handkerchief
+5898,PFL-500-185,Red floral handkerchief
+5899,PFL-500-186,Purple floral handkerchief
+5900,PFL-500-282,Navy dotted handkerchief
+5949,PSLY500-201,White paisley handkerchief
+5952,PSLY500-239,Extra light pink paisley handkerchief
+6921,PSLY500-240,Red paisley handkerchief
+5969,PSS-500-02,Brown paisley handkerchief
+6549,VE500-01,White handkerchief Bexton
+6550,VE500-02,Champagne handkerchief Bexton
+6551,VE500-03,Silver handkerchief Bexton
+6552,VE500-04,Silver handkerchief Damask
+6553,VE500-05,Black handkerchief Damask
+6554,VE500-06,Champagne handkerchief Damask
+6555,VE500-07,Off white handkerchief Damask
+6925,VE500-09,White handkerchief Niels
+6557,VE500-10,Silver handkerchief Niels
+6558,VE500-11,Champagne handkerchief Niels
+6559,VE500-11-creme,Champagne handkerchief Niels
+6560,VE500-13,Silver handkerchief Oscar
+6561,VE500-14,Off white handkerchief Oscar
+6562,VE500-15,Navy handkerchief Damask
+6563,VE500-15-,Navy handkerchief Oscar
+6564,VE500-16,Burgundy handkerchief Damask
+6565,VE500-17,Gold handkerchief Damask
+6566,VE500-18,Black handkerchief Satin
+6610,VLT-500-01,Bone white handkerchief Velvet
+6611,VLT-500-03,Gold handkerchief Velvet
+6612,VLT-500-04,Copper brown handkerchief Velvet
+6613,VLT-500-05,Silver handkerchief Velvet
+6614,VLT-500-06,Brown handkerchief Velvet
+6615,VLT-500-07,Yellow handkerchief Velvet
+6616,VLT-500-08,Dark green handkerchief Velvet
+6617,VLT-500-09,Light pink handkerchief Velvet
+6618,VLT-500-10,Old pink handkerchief Velvet
+6619,VLT-500-11,Pink handkerchief Velvet
+6620,VLT-500-12,Light purple handkerchief Velvet
+6621,VLT-500-13,Purple handkerchief Velvet
+6622,VLT-500-14,Dark purple handkerchief Velvet
+6623,VLT-500-15,Red handkerchief Velvet
+6624,VLT-500-16,Cherry red handkerchief Velvet
+6625,VLT-500-17,Burgundy handkerchief Velvet
+6626,VLT-500-18,Dark red handkerchief Velvet
+6627,VLT-500-19,Grey handkerchief Velvet
+6628,VLT-500-20,Dark grey handkerchief Velvet
+6629,VLT-500-21,Steel blue handkerchief Velvet
+6630,VLT-500-22,Blue handkerchief Velvet
+6631,VLT-500-23,Navy handkerchief Velvet
+6632,VLT-500-25,White handkerchief Velvet
+6637,XM-500-1,Black Christmas handkerchief Decor
+6638,XM-500-2,Blue Christmas handkerchief Reindeer
+6639,XM-500-3,Navy Christmas handkerchief Santa
+6661,XM500-10,Red Christmas handkerchief Penguin
+6662,XM500-11,Red Christmas handkerchief
+6663,XM500-12,Red Christmas handkerchief Dogs
+6664,XM500-13,Navy Christmas handkerchief
+6665,XM500-14,Burgundy Christmas handkerchief
+6666,XM500-7,Christmas handkerchief Elf Selfie
